@@ -16,10 +16,10 @@ Cryptography library in pure Kotlin.
 
 ### Data Encoding (dec)
 * [BETA] - HEX
-* [WIP] - ASCII
-* [   ] - BINARY
-* [   ] - DECIMAL
-* [   ] - BASE64
+* [BETA] - ASCII
+* [WIP]  - BINARY
+* [   ]  - DECIMAL
+* [   ]  - BASE64
 
 ### Cryptographic hash functions (chf)
 * [   ] - MD5
