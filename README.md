@@ -1,6 +1,17 @@
 # cryptolib
 Cryptography library in pure Kotlin.
 
+# Table of Contents
+
+  * [Features](#features)
+     * [Data Encoding (dec)](#data-encoding-dec)
+     * [Cryptographic hash functions (chf)](#cryptographic-hash-functions-chf)
+     * [Symmetric-key cryptography (skc)](#symmetric-key-cryptography-skc)
+     * [Public-key cryptography (pkc)](#public-key-cryptography-pkc)
+     * [Elliptic-curve cryptography (ecc)](#elliptic-curve-cryptography-ecc)
+  * [Feature Legend](#feature-legend)
+  * [License](#license)
+  
 ## Features
 
 ### Data Encoding (dec)
