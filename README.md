@@ -6,7 +6,7 @@ Cryptography library in pure Kotlin.
 
 ### Data Encoding (dec)
 * [BETA] - HEX
-* [   ] - ASCII
+* [WIP] - ASCII
 * [   ] - BINARY
 * [   ] - DECIMAL
 * [   ] - BASE64
