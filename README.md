@@ -1,7 +1,7 @@
 # cryptolib
 Cryptography library in pure Kotlin.
 
-# Table of Contents
+## Table of Contents
 
   * [Features](#features)
      * [Data Encoding (dec)](#data-encoding-dec)
