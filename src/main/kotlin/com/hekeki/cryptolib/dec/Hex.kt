@@ -27,7 +27,7 @@ object Hex {
         var erg = ""
         while (i < hex.length) {
             val str = hex.substring(i, i + 2)
-            erg += Binary.paddingBinary(str.toLong(16).toString(2))
+            erg += Binary.paddingBinary(str.toLong(16).toString(2), 8)
             i+=2
         }
         return erg

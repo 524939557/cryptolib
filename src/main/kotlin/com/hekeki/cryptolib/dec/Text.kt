@@ -24,7 +24,7 @@ object Text {
         var erg = ""
         val chars = text.toCharArray()
         for (i in chars.indices)
-            erg += Binary.paddingBinary(chars[i].toInt().toString(2))
+            erg += Binary.paddingBinary(chars[i].toInt().toString(2), 8)
         return erg
     }
 
