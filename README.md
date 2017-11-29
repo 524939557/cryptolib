@@ -4,14 +4,14 @@ Cryptography library in pure Kotlin.
 
 ## Features
 
-### Data Encoding
-* [   ] - HEX
+### Data Encoding (dec)
+* [BETA] - HEX
 * [   ] - ASCII
 * [   ] - BINARY
 * [   ] - DECIMAL
 * [   ] - BASE64
 
-### Cryptographic hash functions
+### Cryptographic hash functions (chf)
 * [   ] - MD5
 * [   ] - SHA1
 * [   ] - SHA256
@@ -21,16 +21,16 @@ Cryptography library in pure Kotlin.
 * [   ] - PBKDF2
 * [   ] - SCRYPT
 
-### Symmetric-key cryptography
+### Symmetric-key cryptography (skc)
 * [   ] - AES
 * [   ] - Blowfish
 * [   ] - Serpent
 * [   ] - Twofish
 
-### Public-key cryptography
+### Public-key cryptography (pkc)
 * [   ] - RSA
 
-### Elliptic-curve cryptography
+### Elliptic-curve cryptography (ecc)
 * [   ] - Curve25519
 * [   ] - Curve1174
 * [   ] - MDCurve201601
