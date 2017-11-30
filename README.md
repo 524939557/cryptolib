@@ -19,17 +19,17 @@ Cryptography library in pure Kotlin.
 * [BETA] - ASCII
 * [BETA] - BINARY
 * [BETA] - DECIMAL
-* [WIP]  - BASE64
+* [BETA] - BASE64
 
 ### Cryptographic hash functions (chf)
-* [   ] - MD5
+* [WIP] - MD5
 * [   ] - SHA1
 * [   ] - SHA256
 * [   ] - SHA512
 * [   ] - HMAC
 * [   ] - BCRYPT
-* [   ] - PBKDF2
 * [   ] - SCRYPT
+* [   ] - PBKDF2
 
 ### Symmetric-key cryptography (skc)
 * [   ] - AES
