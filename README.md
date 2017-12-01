@@ -53,7 +53,7 @@ Cryptography library in pure Kotlin.
 * [STABLE] - Reviewed by a third party
 
 ## License
-    Copyright (C) 2007  Dirk Gerhardt
+    Copyright (C) 2017  Dirk Gerhardt
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
