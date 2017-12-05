@@ -23,7 +23,7 @@ Cryptography library in pure Kotlin.
 
 ### Cryptographic hash functions (chf)
 * [BETA] - MD5
-* [TEST] - SHA1
+* [BETA] - SHA1
 * [   ] - SHA256
 * [   ] - SHA512
 * [   ] - HMAC
