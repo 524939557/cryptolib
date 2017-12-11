@@ -39,7 +39,7 @@ object SHA256 {
 
     fun hash(msgBytes: ByteArray): ByteArray {
 
-        // Pre-processing:
+        // Pre-processing
         val preprocessedMessage = preProcessing(msgBytes)
 
         // Processing
