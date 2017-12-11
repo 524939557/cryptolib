@@ -36,18 +36,16 @@ object SHA512 {
             0x0A637DC5A2C898A6L, 0x113F9804BEF90DAEL, 0x1B710B35131C471BL, 0x28DB77F523047D84L, 0x32CAAB7B40C72493L, 0x3C9EBE0A15C9BEBCL, 0x431D67C49C100D4CL,
             0x4CC5D4BECB3E42B6L, 0x597F299CFC657E2AL, 0x5FCB6FAB3AD6FAECL, 0x6C44198C4A475817L)
 
-    fun hash(message: String): String {
-
-        val msgBytes = message.toByteArray()
+    fun hash(msgBytes: ByteArray): ByteArray {
 
         // Pre-processing:
         val preprocessedMessage = preProcessing(msgBytes)
 
         // Processing
-        val sha256raw = processMessage(preprocessedMessage, preprocessedMessage.size)
-
-        return encode(sha256raw)
+        return processMessage(preprocessedMessage, preprocessedMessage.size)
     }
+
+    fun hash(message: String) = encode(hash(message.toByteArray()))
 
     private fun preProcessing(msgBytes: ByteArray): ByteArray {
         val initialLen = msgBytes.size
@@ -139,21 +137,21 @@ object SHA512 {
             i++
         }
 
-        val sha256raw = ByteArray(64)
+        val sha512raw = ByteArray(64)
 
-        append(sha256raw, a, 0)
-        append(sha256raw, b, 8)
-        append(sha256raw, c, 16)
-        append(sha256raw, d, 24)
-        append(sha256raw, e, 32)
-        append(sha256raw, f, 40)
-        append(sha256raw, g, 48)
-        append(sha256raw, h, 56)
+        append(sha512raw, a, 0)
+        append(sha512raw, b, 8)
+        append(sha512raw, c, 16)
+        append(sha512raw, d, 24)
+        append(sha512raw, e, 32)
+        append(sha512raw, f, 40)
+        append(sha512raw, g, 48)
+        append(sha512raw, h, 56)
 
-        return sha256raw
+        return sha512raw
     }
 
-    fun toLong(input: ByteArray, j: Int): Long {
+    private fun toLong(input: ByteArray, j: Int): Long {
         var v: Long = 0
         for (i in 0..7) {
             v = (v shl 8) + (input[i + j].toLong() and 0xff)
