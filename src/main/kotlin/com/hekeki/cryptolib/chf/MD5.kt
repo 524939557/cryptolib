@@ -32,18 +32,15 @@ object MD5 {
     private val C0 = 0x98BADCFE.toInt()
     private val D0 = 0x10325476
 
-    fun hash(message: String): String {
-
-        val msgBytes = message.toByteArray()
-
+    fun hash(msgBytes: ByteArray): ByteArray {
         // Pre-processing:
         val preprocessedMessage = preProcessing(msgBytes)
 
         // Processing
-        val md5raw = processMessage(preprocessedMessage, msgBytes.size)
-
-        return encode(md5raw)
+        return processMessage(preprocessedMessage, msgBytes.size)
     }
+
+    fun hash(message: String) = encode(hash(message.toByteArray()))
 
     private fun preProcessing(msgBytes: ByteArray): ByteArray {
 
@@ -155,7 +152,7 @@ object MD5 {
         }
     }
 
-    private fun encode(bytes: ByteArray): String {
+    fun encode(bytes: ByteArray): String {
         var buf = ""
         var i = 0
         while (i < bytes.size) {
