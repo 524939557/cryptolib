@@ -26,17 +26,15 @@ object SHA1 {
     private val H3 = 0x10325476
     private val H4 = 0xC3D2E1F0.toInt()
 
-    fun hash(message: String): String {
+    fun hash(message: String): String = encode(hash(message.toByteArray()))
 
-        val msgBytes = message.toByteArray()
+    fun hash(msgBytes: ByteArray): ByteArray {
 
         // Pre-processing:
         val preprocessedMessage = preProcessing(msgBytes)
 
         // Processing
-        val sha1raw = processMessage(preprocessedMessage, msgBytes.size)
-
-        return encode(sha1raw)
+        return processMessage(preprocessedMessage, msgBytes.size)
     }
 
     private fun preProcessing(msgBytes: ByteArray): ByteArray {
@@ -162,7 +160,7 @@ object SHA1 {
         }
     }
 
-    private fun encode(bytes: ByteArray): String {
+    fun encode(bytes: ByteArray): String {
         var buf = ""
         var i = 0
         while (i < bytes.size) {
