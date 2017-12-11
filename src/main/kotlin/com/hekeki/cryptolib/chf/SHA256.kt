@@ -37,18 +37,16 @@ object SHA256 {
             0x19a4c116, 0x1e376c08, 0x2748774c, 0x34b0bcb5, 0x391c0cb3, 0x4ed8aa4a, 0x5b9cca4f, 0x682e6ff3, 0x748f82ee, 0x78a5636f,
             -0x7b3787ec, -0x7338fdf8, -0x6f410006, -0x5baf9315, -0x41065c09, -0x398e870e)
 
-    fun hash(message: String): String {
-
-        val msgBytes = message.toByteArray()
+    fun hash(msgBytes: ByteArray): ByteArray {
 
         // Pre-processing:
         val preprocessedMessage = preProcessing(msgBytes)
 
         // Processing
-        val sha256raw = processMessage(preprocessedMessage, msgBytes.size)
-
-        return encode(sha256raw)
+        return processMessage(preprocessedMessage, msgBytes.size)
     }
+
+    fun hash(message: String) = encode(hash(message.toByteArray()))
 
     private fun preProcessing(msgBytes: ByteArray): ByteArray {
         // calculate length in bits ≡ 448 (mod 512)
@@ -157,7 +155,7 @@ object SHA256 {
         return sha256raw
     }
 
-    private fun encode(bytes: ByteArray): String {
+    fun encode(bytes: ByteArray): String {
         var buf = ""
         var i = 0
         while (i < bytes.size) {
