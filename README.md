@@ -27,10 +27,10 @@ Cryptography library in pure Kotlin.
 * [BETA] - SHA1
 * [BETA] - SHA224
 * [BETA] - SHA256
-* [BETA]  - SHA384
+* [BETA] - SHA384
 * [BETA] - SHA512
-* [TEST] - HMAC
-* [   ] - BCRYPT
+* [BETA] - HMAC
+* [WIP] - BCRYPT
 * [   ] - SCRYPT
 * [   ] - PBKDF2
 
