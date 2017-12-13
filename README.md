@@ -29,13 +29,13 @@ Cryptography library in pure Kotlin.
 * [BETA] - SHA256
 * [BETA]  - SHA384
 * [BETA] - SHA512
-* [WIP] - HMAC
+* [TEST] - HMAC
 * [   ] - BCRYPT
 * [   ] - SCRYPT
 * [   ] - PBKDF2
 
 ### Symmetric-key cryptography (skc)
-* [   ] - AES
+* [   ] - AES (Rijndael)
 * [   ] - Blowfish
 * [   ] - Serpent
 * [   ] - Twofish
