@@ -20,10 +20,10 @@ package com.hekeki.cryptolib.chf
 
 object SHA384 {
 
-    var H = longArrayOf(-0x344462a23efa6128L, 0x629a292a367cd507L, -0x6ea6fea5cf8f22e9L, 0x152fecd8f70e5939L, 0x67332667ffc00b31L, -0x714bb57897a7eaefL, -0x24f3d1f29b067059L, 0x47b5481dbefa4fa4L)
+    private var H = longArrayOf(-0x344462a23efa6128L, 0x629a292a367cd507L, -0x6ea6fea5cf8f22e9L, 0x152fecd8f70e5939L, 0x67332667ffc00b31L, -0x714bb57897a7eaefL, -0x24f3d1f29b067059L, 0x47b5481dbefa4fa4L)
 
 
-    var K = longArrayOf(0x428A2F98D728AE22L, 0x7137449123EF65CDL, -0x4a3f043013b2c4d1L, -0x164a245a7e762444L, 0x3956C25BF348B538L, 0x59F111F1B605D019L,
+    private var K = longArrayOf(0x428A2F98D728AE22L, 0x7137449123EF65CDL, -0x4a3f043013b2c4d1L, -0x164a245a7e762444L, 0x3956C25BF348B538L, 0x59F111F1B605D019L,
             -0x6dc07d5b50e6b065L, -0x54e3a12a25927ee8L, -0x27f855675cfcfdbeL, 0x12835B0145706FBEL, 0x243185BE4EE4B28CL, 0x550C7DC3D5FFB4E2L, 0x72BE5D74F27B896FL,
             -0x7f214e01c4e9694fL, -0x6423f958da38edcbL, -0x3e640e8b3096d96cL, -0x1b64963e610eb52eL, -0x1041b879c7b0da1dL, 0x0FC19DC68B8CD5B5L, 0x240CA1CC77AC9C65L,
             0x2DE92C6F592B0275L, 0x4A7484AA6EA6E483L, 0x5CB0A9DCBD41FBD4L, 0x76F988DA831153B5L, -0x67c1aead11992055L, -0x57ce3992d24bcdf0L, -0x4ffcd8376704dec1L,
@@ -149,7 +149,7 @@ object SHA384 {
         return sha384raw
     }
 
-    fun toLong(input: ByteArray, j: Int): Long {
+    private fun toLong(input: ByteArray, j: Int): Long {
         var v: Long = 0
         for (i in 0..7) {
             v = (v shl 8) + (input[i + j].toLong() and 0xff)

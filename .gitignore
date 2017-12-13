@@ -9,3 +9,4 @@ lib/
 *.iws
 Features.txt
 gh-md-toc
+src/main/kotlin/com/hekeki/cryptolib/pseudocode/

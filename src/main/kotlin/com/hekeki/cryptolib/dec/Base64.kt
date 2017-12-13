@@ -97,9 +97,9 @@ object Base64 {
         var si = 0
         var di = 0
         while (si < tempBytes.size && di < byteDest.size / 3 * 3) {
-            byteDest[di++] = (tempBytes[si++].toInt() shl 2 and 0xfc or (tempBytes.get(si).toInt().ushr(4) and 0x03)).toByte()
-            byteDest[di++] = (tempBytes.get(si++).toInt() shl 4 and 0xf0 or (tempBytes.get(si).toInt().ushr(2) and 0x0f)).toByte()
-            byteDest[di++] = (tempBytes[si++].toInt() shl 6 and 0xc0 or (tempBytes.get(si++).toInt() and 0x3F)).toByte()
+            byteDest[di++] = (tempBytes[si++].toInt() shl 2 and 0xfc or (tempBytes[si].toInt().ushr(4) and 0x03)).toByte()
+            byteDest[di++] = (tempBytes[si++].toInt() shl 4 and 0xf0 or (tempBytes[si].toInt().ushr(2) and 0x0f)).toByte()
+            byteDest[di++] = (tempBytes[si++].toInt() shl 6 and 0xc0 or (tempBytes[si++].toInt() and 0x3F)).toByte()
         }
 
         if (si < tempBytes.size - 2) {

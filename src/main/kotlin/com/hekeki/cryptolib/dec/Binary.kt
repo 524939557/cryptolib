@@ -62,6 +62,6 @@ object Binary {
     internal fun paddingBinary(bin: String, length: Int): String {
         var erg = bin
         while (erg.length < length) erg = "0" + erg
-        return erg;
+        return erg
     }
 }
