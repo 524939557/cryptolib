@@ -48,6 +48,16 @@ Cryptography library in pure Kotlin.
 * [   ] - Curve1174
 * [   ] - MDCurve201601
 
+### Nice-to-have
+* [   ] - SHA3-224
+* [   ] - SHA3-256
+* [   ] - SHA3-384
+* [   ] - SHA3-512
+* [   ] - SHAKE128
+* [   ] - SHAKE256
+* [   ] - ARGON2
+* [   ] - YESCRYPT
+
 ## Feature Legend
 * [   ] - Not implemented yet
 * [WIP] - Work in progress
