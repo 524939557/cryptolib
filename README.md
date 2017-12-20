@@ -9,6 +9,7 @@ Cryptography library in pure Kotlin.
      * [Symmetric-key cryptography (skc)](#symmetric-key-cryptography-skc)
      * [Public-key cryptography (pkc)](#public-key-cryptography-pkc)
      * [Elliptic-curve cryptography (ecc)](#elliptic-curve-cryptography-ecc)
+     * [Nice-to-have](#nice-to-have)
   * [Feature Legend](#feature-legend)
   * [License](#license)
   
