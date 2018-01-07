@@ -10,3 +10,4 @@ lib/
 Features.txt
 gh-md-toc
 src/main/kotlin/com/hekeki/cryptolib/pseudocode/
+src/main/kotlin/com/hekeki/cryptolib/aaa/

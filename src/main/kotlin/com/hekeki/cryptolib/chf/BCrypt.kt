@@ -6,6 +6,7 @@ object BCrypt {
 
     private val DEFAULT_SALT_SIZE = 16
     private val DEFAULT_LOG2_ROUNDS = 10
+    // "OrpheanBeholderScryDoubt"
     private val CIPHERTEXT = intArrayOf(0x4f727068, 0x65616e42, 0x65686f6c, 0x64657253, 0x63727944, 0x6f756274)
     val BCRYPT_BASE64_ENCODE = "./ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789"
     val BCRYPT_BASE64_DECODE = byteArrayOf(-1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1,
@@ -39,10 +40,10 @@ object BCrypt {
         return ByteArray(1)
     }
 
-    private fun salt(): ByteArray {
+    fun salt(): ByteArray {
         val saltBytes = ByteArray(DEFAULT_SALT_SIZE)
         SecureRandom.getInstance("SHA1PRNG").nextBytes(saltBytes)
-        return saltBytes;
+        return saltBytes
     }
 
     internal fun encodeBase64(bytes: ByteArray, len: Int): String {
